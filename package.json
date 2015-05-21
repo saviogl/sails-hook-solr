@@ -1,0 +1,37 @@
+{
+  "name": "we-plugin-solr",
+  "description": "We.js Solr Plugin",
+  "version": "0.2.0",
+  "dependencies": {
+    "async": "^1.0.0",
+    "lodash": "^2.4.1",
+    "solr-client": "^0.5.0"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/jshint .",
+    "checkStyle": "./node_modules/.bin/jscs .",
+    "pretest": "npm run-script lint && npm run-script checkStyle",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test",
+    "posttest": "./node_modules/.bin/istanbul check-coverage && rm -rf coverage",
+    "prepublish": "npm prune"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "author": "Sávio Lucena <saviogl@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^1.18.2",
+    "istanbul": "^0.2.7",
+    "jshint": "^2.5.0",
+    "jscs": "^1.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wejs/we-plugin-solr.git"
+  },
+  "sails": {
+    "isHook": true
+  }
+}
