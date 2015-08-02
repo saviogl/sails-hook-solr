@@ -84,6 +84,11 @@ Model.updateToSolr(docsToUpdate, function(err, res){
 	console.log(res.docsUpdated)
 });
 ```
+
+### deleteSolrQuery(query, cb)
+// TODO
+### deleteSolrById(id, cb)
+// TODO
 ### Schemas
 But wait ?! How does the sails-hook-solr knows which fields we want to upload to solr index? One might only want to upload a few fields to relieve the burden of its solr server, or even denormalise some associations copying only the informations needed from the relation.
 
